@@ -41,7 +41,7 @@ public class TodoAPI {
             try{
                 Long id = Long.parseLong(req.params(":id"));
                 if (!todos.containsKey(id)){
-                    return String.format("Todo with the id  \"%s\" not found!", id);
+                    return String.format("Todo with the id \"%s\" not found!", id);
                 }
                 return todos.get(id).toJson();}
             catch(Exception e) {
@@ -91,7 +91,7 @@ public class TodoAPI {
             try {
                 Long id = Long.parseLong(req.params("id"));
                 if (!todos.containsKey(id)) {
-                    return String.format("Todo with the id  \"%s\" not found!", id);
+                    return String.format("Todo with the id \"%s\" not found!", id);
                 }
                 todos.remove(id);
                 return todos.get(id).toJson();
